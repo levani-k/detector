@@ -1,0 +1,10 @@
+.FaceDetectorBody {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(89deg, #FF5EDF 0%, #04C8DE 100%);
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+}
