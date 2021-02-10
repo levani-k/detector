@@ -4,7 +4,9 @@ import EveryFaceDetector from './Detectors/EveryFaceDetector/EveryFaceDetectorCo
 import FoodDetector from './Detectors/FoodDetector/FoodDetectorContainers/FoodDetector'
 import NavigationBar from './maincomponents/NavigationBar/NavigationBar'
 import FooterContent from './maincomponents/FooterContent/FooterContent'
+import MainContent from './maincomponents/MainContent/MainContent'
 import './App.css'
+
 
 class App extends React.Component {
   constructor () {
@@ -26,15 +28,17 @@ class App extends React.Component {
     this.setState({display: 'FoodDetector'})
   }
 
+  changneDisplayToHome = () => {
+    this.setState({display: 'home'})
+  }
 
   display = () => {
       if (this.state.display == 'home') {
         return (
-          <NavigationBar 
-            changneDisplayToCelebrity={this.changneDisplayToCelebrity} 
-            changneDisplayToEveryFace={this.changneDisplayToEveryFace} 
-            changneDisplayToFoodDetector={this.changneDisplayToFoodDetector}
-          />
+          <div>
+            <MainContent />
+            <FooterContent />
+          </div>
         )
       }else if(this.state.display == 'CelebrityFaceDetector') {
         return (
@@ -55,13 +59,14 @@ class App extends React.Component {
   render() {
     return(
       <div className='AppBody'>
+        <NavigationBar 
+          changneDisplayToCelebrity={this.changneDisplayToCelebrity} 
+          changneDisplayToEveryFace={this.changneDisplayToEveryFace} 
+          changneDisplayToFoodDetector={this.changneDisplayToFoodDetector}
+          changneDisplayToHome={this.changneDisplayToHome}
+        />
         {this.display()}
-        <main className='tc'>
-          <h1>this app is using clarifai's API and makes it work</h1>
-          <p>The purpose of this creation was to train its creator</p>
-        </main>
-        <FooterContent />
-      </div>  
+      </div> 
     )
   }
 }

@@ -1,0 +1,10 @@
+.content{
+	display: flex;
+}
+
+.header {
+	text-align: center;
+	width: 99vw;
+	background-color: grey;
+	color: white;
+}
