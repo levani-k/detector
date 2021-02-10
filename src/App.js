@@ -3,6 +3,7 @@ import CelebrityFaceDetector from './Detectors/CelebrityFaceDetector/containers/
 import EveryFaceDetector from './Detectors/EveryFaceDetector/EveryFaceDetectorContainers/EveryFaceDetector'
 import FoodDetector from './Detectors/FoodDetector/FoodDetectorContainers/FoodDetector'
 import NavigationBar from './maincomponents/NavigationBar/NavigationBar'
+import FooterContent from './maincomponents/FooterContent/FooterContent'
 import './App.css'
 
 class App extends React.Component {
@@ -55,6 +56,11 @@ class App extends React.Component {
     return(
       <div className='AppBody'>
         {this.display()}
+        <main className='tc'>
+          <h1>this app is using clarifai's API and makes it work</h1>
+          <p>The purpose of this creation was to train its creator</p>
+        </main>
+        <FooterContent />
       </div>  
     )
   }
