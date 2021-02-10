@@ -15,7 +15,7 @@ const CelebrityBoundingBox = ({ imgLink, arrayOfCelebritiesCordinats }) => {
 									return (
 										<div 
 										key={i} 
-										className='celelbrities-bounding-box' 
+										id='celelbrities-bounding-box' 
 										style={{top: arrayOfCelebritiesCordinats[i].topRow, right: arrayOfCelebritiesCordinats[i].rightCol, bottom: arrayOfCelebritiesCordinats[i].bottomRow, left: arrayOfCelebritiesCordinats[i].leftCol}}>
 											<span style={{color: 'white'}}>{arrayOfCelebritiesCordinats[i].celebrity}: {arrayOfCelebritiesCordinats[i].persentage}%</span>
 										</div>
